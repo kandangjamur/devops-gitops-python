@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: python-hello }
+  template:
+    metadata:
+      labels: { app: python-hello }
+    spec:
+      containers:
+      - name: app
+        image: ghcr.io/kandangjamur/devops-gitops-python:latest
+        ports: [{ containerPort: 8080 }]
