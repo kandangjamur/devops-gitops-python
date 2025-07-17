@@ -10,7 +10,10 @@ spec:
     metadata:
       labels: { app: python-hello }
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
       - name: app
         image: ghcr.io/kandangjamur/devops-gitops-python:latest
-        ports: [{ containerPort: 8080 }]
+        ports:
+        - containerPort: 8080
