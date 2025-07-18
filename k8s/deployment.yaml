@@ -16,4 +16,4 @@ spec:
       - name: app
         image: ghcr.io/kandangjamur/devops-gitops-python:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
